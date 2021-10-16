@@ -11,6 +11,9 @@ app.get('/', (req,res)=>{
 app.get('/login', (req,res)=>{
     res.sendFile(path.join(__dirname,'/views/login.html'))
 })
+app.get('/register', (req,res)=>{
+    res.sendFile(path.join(__dirname,'/views/register.html'))
+})
 
 app.use(express.static(path.resolve(__dirname,'./public')))
 
