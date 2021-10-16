@@ -137,6 +137,30 @@ main .text-name{
     ;
 }
 
+/*login*/
+
+main form{
+    width: 70vw;
+    margin:auto;
+    padding: 25px 0;
+}
+
+main .container button, .container input{
+    width:100%;
+    padding: 6px;
+    font-size: 15px;
+    border-color: #6e6b6b00;
+    border-radius: 5px
+}
+
+main .container input{
+    margin-bottom: 40px;
+}
+main .container button{
+    background:#1259c3;
+    color: white;
+    font-weight: bold;
+}
 
 
 
@@ -173,6 +197,7 @@ footer #credits{
         align-items: center;
         justify-content: space-between;
     }
+
     header .button-search{
         margin-right: 5%;
     }
