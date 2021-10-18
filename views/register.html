@@ -28,8 +28,8 @@ rel="stylesheet" />
                 <li> <a href="#">Ayuda</a> </li>
             </ul>
             <ul class="right -nav">
-                <li> <a href="#">Crea tu cuenta <i class="far fa-id-card"></i></a></li>
-                <li> <a href="#">Ingresa <i class="fas fa-sign-in-alt"></i></a> </li>
+                <li> <a href="register">Crea tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li> <a href="login">Ingresa <i class="fas fa-sign-in-alt"></i></a> </li>
                 <li> <a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a> </li>
             </ul>
         </nav>
@@ -39,22 +39,22 @@ rel="stylesheet" />
         
             <form action="/create-user" method="POST">
                 <div class="container">
-                    <input type="text" name="nombres" placeholder="Nombre y Apellido">
+                    <input type="text" name="nombres" placeholder="Nombre y Apellido" minlength="2" required>
                 </div>
                 <div class="container">
-                    <input type="text" name="usuario" placeholder="Nombre de usuario">
+                    <input type="text" name="usuario" placeholder="Nombre de usuario" minlength="2" required>
                 </div>
                 <div class="container">
-                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="email" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="container">
                     <label class="title">
                         Fecha de nacimiento
                     </label>
-                    <input type="date" name="fecha">
+                    <input type="date" name="fecha" required>
                 </div>
                 <div class="container">
-                    <input type="text" name="domicilio" placeholder="Domicilio">
+                    <input type="text" name="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="container">
                     <label class="title">
@@ -62,11 +62,11 @@ rel="stylesheet" />
                     </label>
                     <div class="radio-button">
                         <div>
-                            <input type="radio" name="perfil" value="vendedor">
+                            <input type="radio" name="perfil" value="vendedor" required>
                             <label>Vendedor </label>
                         </div>
                         <div>
-                            <input type="radio" name="perfil" value="comprador">
+                            <input type="radio" name="perfil" value="comprador" required>
                             <label>Comprador </label>
                         </div>
                         
@@ -98,10 +98,24 @@ rel="stylesheet" />
                             <label>Vida Sana </label>
                         </p>
                     </div>
-
                 </div>
                 <div class="container">
-                    <button type="submit">Enviar</button>
+                    <label class="title">
+                        Foto de usuario
+                    </label>
+                    <input type="file" name="avatar" accept=".jpg .png" required>
+                </div>
+                <div class="container">
+                    <input type="password" id="password" placeholder="Contraseña" minlength="8" required>
+                </div>
+                <div class="container">
+                    <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+                </div>
+                <div class="container">
+                    <div class="buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </div>
                 </div>
             </form>
     </main>
