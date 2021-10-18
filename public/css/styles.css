@@ -17,9 +17,6 @@ a:hover {
   
 }
 
-header ul{
-    display: none;
-}
 header{
     background-color: #EAC926;
     width: 100vw;
@@ -42,19 +39,6 @@ header .search-bar{
 }
 
 
-header nav ul{ 
-    list-style: none;
-    padding:0;
-    margin: 0;
-}
-
-header nav li a{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    padding-left: 2px;
-}
-
 header .burger-menu{
     display: block;
     color:white;
@@ -65,6 +49,38 @@ header .burger-menu{
     text-align: center;
     margin: auto;
     font-size: 17px;
+}
+header .burger-menu:hover{
+    cursor:pointer;
+    opacity:0.85
+}
+header .header-style-bottom{
+    position: absolute;
+    background:#EAC926;
+    width: 100vw;
+    margin-left: -110%;
+}
+header .header-style-bottom ul{ 
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+
+header .header-style-bottom li a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+   /* padding-left: 2px; volver a poner*/
+   width:100%;/*cambio*/
+   padding:10px;/*cambio*/
+   border-bottom: 1px solid;/*cambio*/
+}
+#btn-menu{
+    display: none;
+}
+#btn-menu:checked ~ .header-style-bottom{
+    margin-left: -20px;
+    transition: all 0.3s;
 }
 header .header-text{
     text-align: center;
@@ -219,6 +235,15 @@ footer #credits{
 
 
 @media (min-width: 480px) {
+    header .header-style-bottom{
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    header .header-style-bottom li a{
+       padding: 0 0 0 2px;
+       border-bottom: none;
+    }
     header .header-style-top{
         display: flex;
         margin-bottom: 10px;
