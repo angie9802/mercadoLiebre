@@ -10,7 +10,7 @@ h2{
 }
 
 p, ul{
-    font-size: 12px;
+    font-size: 14px;
 }
 a:hover {    
 	text-decoration: underline;
@@ -28,7 +28,6 @@ header .header-one{
     align-items: center;
     justify-content: space-between;
 }
-
 
 header .img-logo{
     width: 50%;
@@ -88,10 +87,9 @@ header .header-style-bottom li a{
     text-decoration: none;
     color: black;
     display: inline-block;
-   /* padding-left: 2px; volver a poner*/
-   width:100%;/*cambio*/
-   padding:10px;/*cambio*/
-   border-bottom: 1px solid;/*cambio*/
+   width:100%;
+   padding:10px;
+   border-bottom: 1px solid;
 }
 #btn-menu{
     display: none;
@@ -164,15 +162,15 @@ main .article-style i{
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: all 1.5s;
 }
+main .fa-truck:hover {
+    transform: rotateZ(-90deg);
+}
+
 main .article-style div{
     display: flex;
     align-items:center;
-}
-
-main .fa-truck:hover {
-    transform: rotateZ(-90deg);
-    transition: all 1.5s;
 }
 
 main .text-price{
@@ -294,8 +292,6 @@ footer #credits{
         align-items: center;
         justify-content: space-between;
     }
-
-   
     header nav{
         display: flex;
         justify-content: space-between;
@@ -310,6 +306,7 @@ footer #credits{
     header .burger-menu{
         display: none;
     }
+    /*-----main------*/
     main  .main-style{
         display: flex;
         flex-wrap: wrap;
@@ -326,6 +323,7 @@ footer #credits{
    
 }
 @media (min-width: 768px) {
+    /*-----header------*/
     header .img-logo{
         width:250px
     }
@@ -333,6 +331,7 @@ footer #credits{
         width: 40vw;
         margin: 0 20px;
     }
+    /*-----main------*/
     main .header-one{
         width:70%
     }
@@ -348,5 +347,11 @@ footer #credits{
     }
     footer section{
         display:flex;
+    }
+    footer .icon-style{
+        transition: color 400ms;
+    }
+    footer .icon-style:hover{
+        color: #39b54a;
     }
 }
