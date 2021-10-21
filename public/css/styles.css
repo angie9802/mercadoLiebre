@@ -162,7 +162,7 @@ main .article-style i{
     position: absolute;
     right: 20px;
     top: -15px;
-    transition: all 1.5s;
+    transition: all 0.5s;
 }
 main .fa-truck:hover {
     transform: rotateZ(-90deg);
@@ -269,12 +269,15 @@ footer section div{
 }
 footer .icon-style{
     color: #1259c3;
+    transition: color 400ms;
 }
 footer #credits{
     margin: 40px 20px 15px;
 }
 
-
+footer .icon-style:hover{
+    color: #39b54a;
+}
 @media (min-width: 480px) {
     
     header .header-style-bottom{
@@ -313,7 +316,6 @@ footer #credits{
         justify-content: space-between;
     }
     main .article-product{
-        
         width:45%;
         margin: 0px 0px 10px 0px;
     }
@@ -348,10 +350,5 @@ footer #credits{
     footer section{
         display:flex;
     }
-    footer .icon-style{
-        transition: color 400ms;
-    }
-    footer .icon-style:hover{
-        color: #39b54a;
-    }
+    
 }
