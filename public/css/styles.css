@@ -76,6 +76,7 @@ header .header-style-bottom{
     background:#EAC926;
     width: 100%;
     margin-left: -110%;
+    transition: all 0.3s;
 }
 header .header-style-bottom ul{ 
     list-style: none;
@@ -98,6 +99,7 @@ header .header-style-bottom li a{
     margin-left: -20px;
     transition: all 0.3s;
 }
+
 header .header-text{
     margin-right: 5px;
     text-align: center;
