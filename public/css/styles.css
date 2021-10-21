@@ -19,7 +19,7 @@ a:hover {
 
 header{
     background-color: #EAC926;
-    width: 100vw;
+    width: 100%;
     padding:20px;
 }
 
@@ -34,11 +34,29 @@ header .img-logo{
     width: 50%;
 }
 header .search-bar{
-    width: 50%;
-    margin-left: 5%;
+   width:50%;
+   margin: 0 5px;
+   background: #fff;
+   height: 30px;
+   border-radius: 5px;
+   padding: 10px 5px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   position: relative;
 }
-
-
+header .search-bar input, .search-bar button{
+    background-color: transparent;
+    border:0;
+}
+header .search-bar button{
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+header .search-bar input{
+    width: 90%;
+}
 header .burger-menu{
     display: block;
     color:white;
@@ -57,7 +75,7 @@ header .burger-menu:hover{
 header .header-style-bottom{
     position: absolute;
     background:#EAC926;
-    width: 100vw;
+    width: 100%;
     margin-left: -110%;
 }
 header .header-style-bottom ul{ 
@@ -83,11 +101,12 @@ header .header-style-bottom li a{
     transition: all 0.3s;
 }
 header .header-text{
+    margin-right: 5px;
     text-align: center;
     display: block;
 }
 section .banner{
-    width: 100vw;
+    width: 100%;
 }
 
 .text-center{
@@ -107,12 +126,13 @@ main h2{
     margin-left: 5vw;
 }
 main{
-    width:100vw
+    width:100%;
 }
 main .main-style{
     padding-bottom: 20px;
     margin:auto;
     width: 90vw;
+    
 }
 main .article-product{
     width: 100%;
@@ -275,9 +295,7 @@ footer #credits{
         justify-content: space-between;
     }
 
-    header .button-search{
-        margin-right: 5%;
-    }
+   
     header nav{
         display: flex;
         justify-content: space-between;
@@ -308,7 +326,13 @@ footer #credits{
    
 }
 @media (min-width: 768px) {
-    
+    header .img-logo{
+        width:250px
+    }
+    header .search-bar{
+        width: 40vw;
+        margin: 0 20px;
+    }
     main .header-one{
         width:70%
     }
@@ -318,6 +342,10 @@ footer #credits{
 
 }
 @media (min-width: 1200px) {
+    header .search-bar{
+        width: 50vw;
+        margin: 0 40px;
+    }
     footer section{
         display:flex;
     }
